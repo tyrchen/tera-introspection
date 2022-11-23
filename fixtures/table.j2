@@ -1,0 +1,27 @@
+{% extends "crn:cws:cella:us-west2::view:todo/main" %}
+
+{% block content %}
+{% include "crn:cws:cella:us-west2::view:todo/table" %}
+<table>
+    {%- for todo in data.items -%}
+    <tr>
+        {%- for col in data.names -%}
+        {%- if loop.first -%}
+        <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">
+            {{- todo[col] -}}</td>
+        {%- else -%}
+        <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{{- todo[col] -}}</td>
+        {%- endif -%}
+        {%- endfor -%}
+        <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+            <a href="{{ config.edit_get }}" class="text-indigo-600 hover:text-indigo-900">{{
+                config.edit_title
+                }}</a>
+        </td>
+        {%- for v in todo.values %} data.items[].values[]
+        <td>{{ v.abc }}</td>
+        {%- endfor -%}
+    </tr>
+    {%- endfor -%}
+</table>
+{% endblock %}
