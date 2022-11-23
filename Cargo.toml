@@ -2,8 +2,16 @@
 name = "tera-introspection"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+license = "MIT"
+documentation = "https://docs.rs/tera-introspection"
+repository = "https://github.com/tyrchen/tera-introspection"
+homepage = "https://github.com/tyrchen/tera-introspection"
+description = """
+Utilities for introspecting Tera templates.
+"""
+readme = "README.md"
+categories = ["template-engine"]
+keywords = ["template", "html", "django", "markup", "jinja2"]
 
 [dependencies]
 itertools = "0.10.5"
